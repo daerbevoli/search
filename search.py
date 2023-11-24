@@ -90,11 +90,9 @@ def depthFirstSearch(problem):
     print("Is the start a goal?", problem.isGoalState(problem.getStartState()))
     print("Start's successors:", problem.getSuccessors(problem.getStartState()))
     print("Start:", problem.getStartState())
-    # HALLO NDUZIUBAUBDizonzd
 
     stack = util.Stack() # stack used for DFS LIFO
     visited = set() # set -> no repetitions
-    # fnjdihsd
 
     stack.push((problem.getStartState(), [])) # push the start position and an empty list
 
