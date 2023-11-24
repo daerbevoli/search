@@ -409,21 +409,20 @@ def cornersHeuristic(state, problem):
     # keep using this heuristic until you get to the corner
     # from that position, again find the shortest distance and repeat
 
-    heuristic = 30
+    heuristic = 0
 
     # here we check whether for a corner if it is not the visited
     # if its not, we calculate its manhatten distance
-    # if the current manhatten distance is greater than the current heuristic
+    # if the current manhatten distance is greater than the heuristic
     # we return this distance else we return 0
-    print("heuristic before: ", heuristic)
     for corner in corners:
+
         if corner not in state[1]:
-            #dist_to_corner = abs(state[0][0] - corner[0]) + abs(state[0][1] - corner[1])
             dist_to_corner = util.manhattanDistance(state[0], corner)
+
             if dist_to_corner >= heuristic:
-                print("distance > heuristic: ", dist_to_corner, heuristic)
                 heuristic = dist_to_corner
-    print("heuristic after: ", heuristic)
+
     return heuristic
 
 class AStarCornersAgent(SearchAgent):

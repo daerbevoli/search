@@ -148,6 +148,7 @@ def uniformCostSearch(problem):
     priority_queue.push((problem.getStartState(), []), 0)
     while not priority_queue.isEmpty():
         node, actions = priority_queue.pop()
+
         if problem.isGoalState(node):
             return actions
 
