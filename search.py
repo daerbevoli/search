@@ -94,6 +94,7 @@ def depthFirstSearch(problem):
 
     stack = util.Stack() # stack used for DFS LIFO
     visited = set() # set -> no repetitions
+    # fnjdihsd
 
     stack.push((problem.getStartState(), [])) # push the start position and an empty list
 
